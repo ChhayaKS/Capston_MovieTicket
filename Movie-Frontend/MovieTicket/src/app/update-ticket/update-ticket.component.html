@@ -1,0 +1,26 @@
+<div class="container">
+
+    <form #regForm="ngForm" (ngSubmit)="updateTicketDetails(regForm.value)" >
+        
+        <h1>Update Ticket</h1>
+
+        <div class="row">
+            <div class="col-md-9">
+                
+                <div class="form-outline">
+                  <label class="form-label" for="total_Ticket">Total Tickets : </label>
+                  <input type="number"  #total_Ticket name="total_Ticket" class="form-control form-control-lg" required [(ngModel)]="ticketUpdate.total_Ticket">
+                </div>
+                 
+                <div class="form-outline">
+                <label for="price" class="form-label">Price :  </label>
+                <input type="number" #price  name="price" class="form-control form-control-lg" required [(ngModel)]="ticketUpdate.price">
+                </div>
+            </div>
+
+        </div>
+
+        <button style="align-items: center; margin-left: 40%;" class="btn btn-primary btn-lg" type="submit">Update Ticket</button>
+
+    </form>
+</div>

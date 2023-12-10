@@ -1,0 +1,26 @@
+.container h1{
+    padding-top: 5%;
+    text-align: center;
+    color: chocolate;
+    border: 1pc;
+    border-color: black;
+}
+
+.row
+{
+    padding: 4%;
+}
+
+.form-outline
+{
+    padding: 2%;
+    margin-left: 30%;
+}
+.form-select
+{
+    margin: left 6px;
+}
+.select
+{
+    width: 100%;
+}

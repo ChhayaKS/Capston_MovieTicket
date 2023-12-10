@@ -1,0 +1,21 @@
+
+<div class="container" style="margin-top: 5%; padding: 2%;">
+    <h1 style="text-align: center;">User Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="  userLogin()">
+      <div class="form-group">
+        <label for="username" class="text-align left">Username</label><br>
+        <input type="text" class="form-control" name="username"  [(ngModel)]="username" required #name="ngModel"  placeholder="Enter username" ><br>
+        <span *ngIf="name.invalid && name.touched" style="color: red">Please Enter valid input</span>
+      </div>
+      <div class="form-group">
+        <label for="password" class="text-align left">Password</label><br>
+        <input type="password" class="form-control" name="password"  [(ngModel)]="password" required #pass="ngModel"   placeholder="Enter password"><br>
+        <span *ngIf="pass.invalid &&  pass.touched" style="color: red">Please Enter valid input</span>
+      </div>
+      <button style="text-align: center; font-size: 1.25rem; margin-left: 45%;" type="submit" class="btn btn-primary ">Login</button>
+    </form>
+    <a style="text-align: center;color:red;font-size: 1.25rem; margin-left: 41%;" routerLink="user-register">New User? Register Here</a>
+
+  
+  </div>
+  

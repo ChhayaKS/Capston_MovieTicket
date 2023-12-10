@@ -1,0 +1,36 @@
+
+<app-admin-home></app-admin-home>
+
+    <div class="container">
+         <div class="row">
+            <h1>List of All movies</h1>
+            <button  style="text-align: center;" routerLink="create-movie" class="btn btn-primary  mat-raised-button" > Add_New_Movie_Details </button>
+         </div>
+         <div class="row1">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Movie_Name</th>
+                    <th>MoviePoster</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>  
+                </tr>
+                <tr *ngFor="let movielist of movieList">
+                    <td>{{movielist.id}}</td>
+                    <td>{{movielist.movie_name}}</td>
+                    <td>{{movielist.movieImage}}</td>
+                    <td>{{movielist.category}}</td>
+                    <td>
+                      <button  (click)="updateMovie(movielist.id)"  class="btn btn-sm btn-warning" style=" width: 60%;">Update</button>
+                    </td>
+                    <td>
+                      <button  (click)="deleteMovie(movielist.id)"  class="btn btn-sm btn-danger" style="width: 60%;"> Delete </button>
+                    </td>
+                  </tr>
+
+            </table>
+
+         </div>
+
+    </div>

@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import {NgForm} from '@angular/forms'
+import { Movie } from './shared/Movie';
+import { FormControl,FormGroup } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'MovieTicket';
+}

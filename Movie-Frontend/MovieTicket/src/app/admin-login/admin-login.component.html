@@ -1,0 +1,27 @@
+
+<div class="container" [ngStyle]="{backgroundImage:'url('+image+')'} " >
+ <div class="row1">
+  <h1>Admin Login</h1>
+ </div>
+ <div class="row2">
+  <form #loginForm="ngForm" (ngSubmit)="adminLogin()">
+    <div class="form-group">
+      <label for="username">Username</label><br>
+      <input type="text" class="form-control" name="username"  placeholder="Enter Username" [(ngModel)]="username" required #name="ngModel"/><br>
+      <span *ngIf="name.invalid && name.touched" style="color: red;">Please Enter valid input</span>
+    </div>
+    <div class="form-group">
+      <label for="password" >Password</label><br>
+      <input type="password" class="form-control" name="password"  placeholder="Enter password" [(ngModel)]="password" required #pass="ngModel"/><br>
+      <span *ngIf="pass.invalid &&  pass.touched" style="color:red">Please Enter valid input</span>
+    </div>
+    <div style="text-align: center;">
+    <button style="text-align: center; font-size: 2 rem;" type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </form>
+ </div>
+
+
+
+
+</div>

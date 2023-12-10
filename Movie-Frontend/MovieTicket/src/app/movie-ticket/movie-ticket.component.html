@@ -1,0 +1,35 @@
+<app-admin-home></app-admin-home>
+
+
+<div class="container">
+    <div class="row">
+        <h1>Movie Ticktet Details Page</h1>
+    </div>
+        <button style="text-align: center;" routerLink="create-ticket" class="btn btn-primary mat-raised-button">AddTicketForMovie</button>
+    <div class="row1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- <th>Movie_id</th> -->
+                    <th>Ticket_id</th>
+                    <th>Number Of tickets</th>
+                    <th>Price</th>
+                    <th>UpadateTicketDetails</th>
+                    <th>DeleteMovieTikcet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movieTicket of allTickets">
+                    <!-- <td>{{movieTicket.movie.movie_name}}</td> -->
+                    <td>{{movieTicket.id}}</td>
+                    <td>{{movieTicket.total_Ticket}}</td>
+                    <td>{{movieTicket.price}}</td>
+                    <td><button (click)="updateTicket(movieTicket.id)" class="btn btn-sm btn-warning" style=" width: 60%;">Update</button></td>
+                    <td><button (click)="deleteTicket(movieTicket.id)" class="btn btn-sm btn-danger" style="width: 60%;"> Delete </button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+</div>
+

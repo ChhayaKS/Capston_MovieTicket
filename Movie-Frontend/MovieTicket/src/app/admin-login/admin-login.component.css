@@ -1,0 +1,29 @@
+.form-group{
+    margin-left: 10%;
+    width: 80%;
+    text-align: left;
+    color: rgb(15, 2, 2);
+}
+.container
+{
+    padding:10% ;
+    margin-top: 5%;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 30px;
+    margin-bottom: 2%;
+    color:rgb(10, 1, 1);
+}
+
+
+

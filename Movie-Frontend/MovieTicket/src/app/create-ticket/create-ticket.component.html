@@ -1,0 +1,27 @@
+<div class="container">
+
+<form #regForm="ngForm" (ngSubmit)="movieTicketRegistration(regForm.value)">
+    <h1>Add Ticket Page</h1>
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="form-outline">
+                <label class="form-label" for="movie_id">Enter number Movie ID: </label>
+                <input type="number" placeholder="Enter total ticket " #movie_id name="movie_id" class="form-control form-control-lg" required ngModel >
+              </div>
+
+            <div class="form-outline">
+              <label class="form-label" for="total_Ticket">Enter number of ticket which you want for your movie : </label>
+              <input type="number" placeholder="Enter total ticket " #total_Ticket name="total_Ticket" class="form-control form-control-lg" required ngModel >
+            </div>
+             
+            <div class="form-outline">
+            <label for="price" class="form-label">Enter price of ticket :  </label>
+            <input type="number" placeholder="Enter price of ticket" #price name="price" class="form-control form-control-lg" required ngModel>
+            </div>
+        </div>
+    </div>
+    <button style="align-items: center; margin-left: 40%;" class="btn btn-primary btn-lg" type="submit">Add Ticket</button>
+
+</form>
+</div>

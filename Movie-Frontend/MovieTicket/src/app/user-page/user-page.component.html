@@ -1,0 +1,32 @@
+
+<button type="button" style="margin-left: 1%;margin-top: 2%;" class="btn btn-primary"(click)="getCartData()">Cart</button>
+<button type="button"  style="margin-left: 80%;margin-top: 2%;" class="btn btn-danger" routerLink="/home">Logout</button>
+
+<div class="wrapper" >
+
+    <div style="align-self:center; text-align: center;" class="item" *ngFor ="let movie of movies" >
+        <img src="assets/{{movie.movieImage}}"><br><br>
+        <div  style="color:#181615;font-size: 1.5rem;
+        margin-bottom: 3%; text-align: center;">
+        {{movie.movie_name}}<br>
+        </div>
+
+        <div style="color:#ed9828; font-size: 1.25rem;">
+        {{movie.category}}
+        </div>
+        <div style="color:#77a61f; font-size: 1.25rem;">
+        {{movie.show_time}}
+        </div>
+        <div style="align-self:center; text-align: center;" class="item" *ngFor ="let ticket of ticket">
+        <div style="color:#77a61f; font-size: 1.25rem;">
+          {{ticket.price}}
+          </div> 
+          <div style="color:#77a61f; font-size: 1.25rem;">
+            {{ticket.total_Ticket}}
+            </div>
+          </div>
+        <button   type="button" class="btn btn-primary" (click)="addCartData(movie.id)">Book Movie </button>
+      </div>
+     
+</div>
+

@@ -1,0 +1,53 @@
+<button type="button"  style="margin-left: 80%;margin-top: 2%;" class="btn btn-danger" routerLink="/home">Logout</button>
+
+<h1 style="text-align:center;">Cart Items</h1>
+
+<div class="container">
+        <table class="table" >
+            <thead style="justify-items: center;">
+                <tr>
+                    <th>Movie Image</th>
+                    <th>Movie Id</th>
+                    <th>Movie Name</th>
+                    <th>Ticket Price</th>
+                    <th>Total Ticket</th>
+                    <th> Number Of Ticket To Book</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of carts">
+                    <td><img style="width: 120px;height: 80px; border-radius: 8px; padding: 5%;" src="assets/images/{{cart.movies.movieImage}}" /></td>
+                    <td>{{cart.movies.id}}</td>
+                    <td>{{cart.movies.movie_name}}</td>
+                    <td>{{cart.ticket.price}}</td>
+                    <td>{{cart.ticket.totalTicket}}</td>
+                    <td>
+                        <button class="btn btn-info" (click)=" decreseQuantity(cart,cart.id)"[disabled]="cart.ticket ==1">-</button>{{cart.ticket}}
+                        <button class="btn btn-info" (click)=" increseQuantity(cart,cart.id)"[disabled]="cart.ticket==1"> + </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger"  color="warn" (click)=" deleteCart(cart.id)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                              </svg> Delete</button>
+                    </td>
+
+                   </tr>
+       
+        </table>
+
+        
+</div>
+
+<div class="container">
+<button class="btn btn-success" (click)="findTotalPrice()">Total Bill Amount</button>
+<h2>Total Bill Amount: {{grandTotal | currency:'INR'}}</h2>
+<br>
+<button class="btn btn-primary" routerLink="/payment/{{grandTotal}}">Check Out</button>
+</div>
+
+
+
+
